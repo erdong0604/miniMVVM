@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model='message.a.b'>
+        <div>{{message.a.b}}</div>
+        <ul>
+            <li></li>
+        </ul>
+        <span>
+            {{message.a.b}}
+            {{message.c}}
+        </span>
+        <p>
+            {{message.c}}
+        </p>
+    </div>
+    <script src="./watcher.js"></script>
+    <script src="./observer.js"></script>
+    <script src="./compile.js"></script>
+    <script src="./MVVM.js"></script>
+    <script>
+        var vm = new MVVM({
+            el:'#app',
+            data:{
+                message:{
+                    a:{
+                        b:'你好MVVM'
+                    },
+                    c:2
+                },
+                name:'erdong'
+            }
+        })
+    </script>
+</body>
+</html>
